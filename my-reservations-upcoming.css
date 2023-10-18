@@ -1,0 +1,452 @@
+.qme1 {
+  position: absolute;
+  top: 5.79%;
+  left: 44.27%;
+  font-size: var(--font-size-lg);
+  color: var(--ffffff);
+}
+.group-child5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 18.21px;
+  background-color: var(--global-white);
+  box-shadow: 18.21428680419922px 18.21428680419922px 36.43px
+    rgba(211, 209, 216, 0.25);
+  width: 323px;
+  height: 105.36px;
+}
+.ambrosia-hotel1 {
+  margin: 0;
+}
+.ambrosia-hotel-container1 {
+  display: inline-block;
+}
+.ambrosia-hotel-container1,
+.ambrosia-hotel-restaurant-container,
+.group-wrapper1 {
+  position: absolute;
+  top: calc(50% - 7.08px);
+  left: 0;
+  width: 110px;
+  height: 14.17px;
+}
+.group-wrapper1 {
+  top: calc(50% - 36.16px);
+  left: 116px;
+}
+.seats1 {
+  position: absolute;
+  top: 34px;
+  left: 250px;
+  font-size: var(--title-3-semibold-20-size);
+  color: var(--color-mediumseagreen-100);
+  text-align: right;
+  display: inline-block;
+  width: 61px;
+  height: 7.08px;
+}
+.union-item,
+.union1 {
+  width: 88px;
+  height: 88px;
+}
+.union-item {
+  position: absolute;
+  top: 201.97px;
+  left: 44px;
+  border-radius: 11.48px;
+  background-color: var(--color-silver);
+}
+.union1 {
+  position: relative;
+  background-color: var(--global-white);
+  box-shadow: 11.48233413696289px 17.223501205444336px 22.96px
+    rgba(211, 209, 216, 0.45);
+}
+.group-child8 {
+  position: absolute;
+  top: 6.77px;
+  left: 8.12px;
+  border-radius: var(--br-3xs);
+  width: 71.48px;
+  height: 74.46px;
+  object-fit: cover;
+}
+.union-group {
+  position: absolute;
+  top: 7.97px;
+  left: 18px;
+  width: 88px;
+  height: 88px;
+}
+.reserve,
+.time-slot-available {
+  position: absolute;
+  display: inline-block;
+}
+.time-slot-available {
+  top: 129px;
+  left: 18px;
+  font-size: var(--small-12px-regular-size);
+  color: var(--sub-color);
+  width: 97px;
+  height: 5.31px;
+}
+.reserve {
+  height: 3.96%;
+  top: 61.63%;
+  right: 42px;
+  font-size: var(--font-size-mini);
+  color: var(--global-white);
+  text-align: center;
+  width: 95px;
+}
+.rectangle-parent3 {
+  position: absolute;
+  top: 194px;
+  left: 26px;
+  width: 323px;
+  height: 134.31px;
+  text-align: left;
+  font-size: var(--medium-16px-medium-size);
+  color: var(--global-black);
+}
+.group-child9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 18.21px;
+  background-color: var(--global-white);
+  box-shadow: 18.21428680419922px 18.21428680419922px 36.43px
+    rgba(211, 209, 216, 0.25);
+  width: 323px;
+  height: 71px;
+}
+.reserve1 {
+  position: absolute;
+  height: 5.04%;
+  top: 78.57%;
+  right: 42px;
+  width: 95px;
+}
+.pm,
+.reserve1 {
+  display: inline-block;
+}
+.group-wrapper2,
+.pm,
+.pm-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 141px;
+  height: 29px;
+}
+.group-wrapper2 {
+  top: 20px;
+  left: 12px;
+  text-align: left;
+  font-size: 39.27px;
+  color: var(--ffffff);
+}
+.group-child13 {
+  position: absolute;
+  top: -10px;
+  left: 179px;
+  border-radius: var(--br-3xs);
+  width: 174px;
+  height: 127px;
+  cursor: pointer;
+}
+.reserve2 {
+  position: absolute;
+  height: 16.9%;
+  top: 36.62%;
+  right: 24px;
+  display: inline-block;
+  width: 66px;
+}
+.rectangle-parent4,
+.rectangle-parent5,
+.rectangle-parent6 {
+  position: absolute;
+  top: 360px;
+  left: 27px;
+  width: 323px;
+  height: 71px;
+}
+.rectangle-parent5,
+.rectangle-parent6 {
+  top: 445px;
+}
+.rectangle-parent6 {
+  top: 530px;
+}
+.pm3 {
+  display: inline-block;
+}
+.group-wrapper5,
+.pm-wrapper1,
+.pm3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 158px;
+  height: 29px;
+}
+.group-wrapper5 {
+  top: 20px;
+  left: 12px;
+  text-align: left;
+  font-size: 39.27px;
+  color: var(--ffffff);
+}
+.rectangle-parent7 {
+  position: absolute;
+  top: 615px;
+  left: 27px;
+  width: 323px;
+  height: 71px;
+}
+.group-child29 {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 171.5px);
+  border-radius: var(--br-8xl-5);
+  border: 1px solid var(--color-whitesmoke);
+  box-sizing: border-box;
+  width: 343px;
+  height: 55px;
+}
+.group-child30,
+.group-child31 {
+  position: absolute;
+  top: -18px;
+  left: -35.46px;
+  border-radius: var(--br-4xl-5);
+  width: 239.96px;
+  height: 127px;
+}
+.group-child31 {
+  top: 4px;
+  left: 180px;
+  background: linear-gradient(
+    90deg,
+    rgba(83, 232, 139, 0),
+    rgba(21, 190, 119, 0)
+  );
+  box-shadow: 0 18px 40px rgba(211, 209, 216, 0.25);
+  width: 159.96px;
+  height: 47px;
+  cursor: pointer;
+}
+.queue1,
+.reservation1 {
+  position: absolute;
+  display: inline-block;
+}
+.reservation1 {
+  top: calc(50% - 12.5px);
+  left: 33px;
+  width: 100px;
+}
+.queue1 {
+  top: 21px;
+  left: 216px;
+  font-size: var(--font-size-sm);
+  font-family: var(--font-font);
+  color: #00a73f;
+  width: 67px;
+}
+.rectangle-parent8 {
+  position: absolute;
+  top: 107px;
+  left: calc(50% - 170.5px);
+  width: 343px;
+  height: 55px;
+  font-size: var(--medium-16px-medium-size);
+  color: #fefefe;
+  font-family: var(--font-zen-antique);
+}
+.mask-group-icon1 {
+  position: absolute;
+  top: 26px;
+  left: 294px;
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+.my-reservations-upcoming-child {
+  position: absolute;
+  height: 9.61%;
+  width: 20.8%;
+  top: 3.33%;
+  right: 76.27%;
+  bottom: 87.07%;
+  left: 2.93%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.frame5,
+.menu-bar-child3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.menu-bar-child3 {
+  border-radius: var(--br-3xl) var(--br-3xl) 0 0;
+  background-color: var(--global-white);
+  box-shadow: 0 0 50px rgba(90, 108, 234, 0.1);
+  width: 375px;
+  height: 74px;
+}
+.frame5 {
+  border-radius: var(--br-xs) var(--br-xs) 0 0;
+  background: linear-gradient(98.81deg, #53e88b, #15be77);
+  width: 110.92px;
+  height: 44px;
+  opacity: 0.1;
+}
+.iconlybulkhome3 {
+  position: absolute;
+  height: 54.55%;
+  width: 22.86%;
+  top: 22.73%;
+  right: 60.95%;
+  bottom: 22.73%;
+  left: 16.19%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.home3 {
+  position: absolute;
+  top: 16px;
+  left: 55.99px;
+  line-height: 131.02%;
+  display: inline-block;
+  width: 36.97px;
+}
+.icon-home-active3 {
+  position: absolute;
+  top: 15px;
+  left: 21.13px;
+  width: 110.92px;
+  height: 44px;
+  font-size: var(--small-12px-regular-size);
+  color: var(--color-gray-300);
+}
+.iconlybulkchat3 {
+  position: absolute;
+  height: 32.43%;
+  width: 6.76%;
+  top: 33.78%;
+  right: 10.7%;
+  bottom: 33.78%;
+  left: 82.54%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  opacity: 0.5;
+}
+.menu-bar-child4 {
+  position: absolute;
+  top: 23px;
+  left: 325.35px;
+  border-radius: 50%;
+  background-color: var(--color-tomato);
+  border: 1px solid var(--global-white);
+  box-sizing: border-box;
+  width: 13.73px;
+  height: 13px;
+}
+.div16 {
+  position: absolute;
+  top: 25px;
+  left: 260.92px;
+  line-height: 131.02%;
+  display: inline-block;
+  width: 5.28px;
+}
+.iconlybulkbuy3 {
+  position: absolute;
+  height: 92.31%;
+  width: 85.71%;
+  top: 7.69%;
+  right: 14.29%;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  opacity: 0.5;
+}
+.notification-cart-child1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: var(--color-tomato);
+  border: 1px solid var(--global-white);
+  box-sizing: border-box;
+  width: 13.73px;
+  height: 13px;
+}
+.div17 {
+  position: absolute;
+  top: 2px;
+  left: 4.23px;
+  line-height: 131.02%;
+  display: inline-block;
+  width: 5.28px;
+}
+.notification-cart3 {
+  position: absolute;
+  top: 0;
+  left: 15.85px;
+  width: 13.73px;
+  height: 14px;
+}
+.icon-cart3,
+.icon-profile3 {
+  position: absolute;
+  height: 35.14%;
+  width: 7.89%;
+  top: 31.08%;
+  right: 29.01%;
+  bottom: 33.78%;
+  left: 63.1%;
+}
+.icon-profile3 {
+  height: 27.03%;
+  width: 4.51%;
+  top: 36.49%;
+  right: 47.33%;
+  bottom: 36.49%;
+  left: 48.17%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  opacity: 0.5;
+}
+.menu-bar3 {
+  position: absolute;
+  top: 738px;
+  left: -1px;
+  width: 375px;
+  height: 74px;
+  text-align: left;
+  font-size: var(--font-size-4xs);
+}
+.my-reservations-upcoming {
+  position: relative;
+  background-color: var(--global-white);
+  width: 100%;
+  height: 812px;
+  text-align: center;
+  font-size: var(--font-size-mini);
+  color: var(--global-white);
+  font-family: var(--font-font);
+}

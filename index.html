@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="./index.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=font:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Actor:wght@400&display=swap" />
+</head>
+
+<body style="margin: 0px;">
+  <div class="detail-menu" id="mainBlock">
+    <img class="photo-menu-icon" alt=""
+      src="https://lh3.googleusercontent.com/p/AF1QipNT0ZILrhHHN8Q89NU_spyk9jsBFm4-FLwI2KOx=s1360-w1360-h1020" />
+
+    <div class="frame" style="    background: white;
+      border-radius: 50px 50px;left: 0px;width: 100%;">
+
+      <div class="scrool-tool"></div>
+      <div class="text-field">
+        <img class="minus-icon" onclick="removeSeats()"  style="    padding: 10px;
+        margin-left: -10px;" alt="" src="./public/minus.svg" />
+
+        <div class="write-text-here" id="seatValue">1</div>
+        <img class="plus-icon" onclick="addSeats()" style="    padding: 10px;
+        margin-right: -10px;" alt="" src="./public/plus.svg" id="plusIcon" />
+      </div>
+      <div class="title">
+        <b class="reservations-for">Reservations For?</b>
+        <b class="quanity">Quanity</b>
+      </div>
+    </div>
+    <div class="component-3">
+      <div class="gridtext-only">
+        <div class="data">
+          <div class="data1">Queue</div>
+        </div>
+        <div class="label">Available</div>
+      </div>
+      <img class="order-1-1" alt="" src="./public/order-1-1@2x.png" />
+
+      <img class="queue-1-1" alt="" src="./public/queue-1-11@2x.png" />
+
+      <div class="gridtext-only1">
+        <div class="data">
+          <div class="data1">Reservation</div>
+        </div>
+        <div class="label">Available</div>
+      </div>
+    </div>
+    <div class="popular-status">
+      <div class="rectangle"></div>
+      <div class="popular">Popular</div>
+    </div>
+
+    <img class="location-icon" alt="" src="./public/location-icon.svg" />
+
+
+    <div class="text">
+      <div class="menu-name">Amar , Veg Restaurant</div>
+      <div class="menu-discription">
+        Nulla occaecat velit laborum exercitation ullamco. Elit labore eu aute
+        elit nostrud culpa velit excepteur deserunt sunt. Velit non est cillum
+        consequat cupidatat ex Lorem laboris labore aliqua ad duis eu laborum.
+      </div>
+    </div>
+
+    <div id="menublock"></div>
+
+    <div id="orderBlock" style="
+      width: 100%;
+      position: absolute;
+      top: -100px;">
+      <div class="rating">
+        <img class="icon-star" alt="" src="./public/icon-star.svg" />
+        <div class="rating1">4,8 Rating</div>
+      </div>
+
+      <div class="rating" style="left: 150px;">
+        <img class="icon-star" alt="" src="./public/shoppingbag-1.svg" />
+        <div class="rating1">2000+ Order</div>
+      </div>
+    
+    
+    </div>
+
+    <form action="/resqme" method="POST" id="mainform">
+      <input type="text" name="seatM" id="seatM" value="0">
+      <input type="submit" value="submit" id="sbtm">
+    </form>
+
+
+    <div class="menu-bar" id="btnMain" style="background-color: white;">
+
+      <div class="cta-button" onclick="scrollEnd()" style="position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);" id="cTAButtonContainer">
+        <div class="rectangle-parent">
+          <div class="rectangle1"></div>
+          <div class="check-out" onclick="scrollEnd()">Check Reservations</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <script>
+   
+   document.getElementById('seatM').value=1
+   var flag=0;
+   function removeSeats(){
+     if(parseInt(document.getElementById('seatValue').innerHTML)>1){
+      var a=parseInt(document.getElementById('seatValue').innerHTML);
+      a-=1;
+      
+      var b=parseInt(document.getElementById('seatM').value);
+      b=a;
+      
+     document.getElementById('seatM').value=b;
+      document.getElementById('seatValue').innerHTML=a;
+    }
+  }
+  
+  function addSeats(){
+    var a=parseInt(document.getElementById('seatValue').innerHTML);
+    console.log(a)
+    a=a+1;
+    
+    var b=parseInt(document.getElementById('seatM').value);
+    b=a;
+    document.getElementById('seatM').value=b;
+    
+    console.log(a)
+    document.getElementById('seatValue').innerHTML=a;
+   }
+
+   function scrollEnd(){
+    window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
+   document.getElementById('sbtm').click();
+  
+   }
+
+    console.log(screen.height);
+    document.getElementById('btnMain').style.top = (screen.height - 90) + "px";
+  </script>
+</body>
+
+</html>
