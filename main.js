@@ -4,7 +4,6 @@ const app = express(); // Create an ExpressJS app
 const bodyParser = require('body-parser'); // Middleware 
 const path = require('path');
 const request = require('request');
-const mysql = require('mysql');
 
 
 // const connection = mysql.createConnection({
