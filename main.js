@@ -4,14 +4,22 @@ const app = express(); // Create an ExpressJS app
 const bodyParser = require('body-parser'); // Middleware 
 const path = require('path');
 const request = require('request');
+const mysql = require('mysql');
 
 
-// const connection = mysql.createConnection({
-//     host :'sql12.freesqldatabase.com',
-//     user:'sql12627038',
-//     password:'nILwiGK3gB',
-//     database:'sql12627038',
-// })
+const connection = mysql.createConnection({
+    host: 'sql8.freesqldatabase.com',
+    user: 'sql8684711',
+    password: 'V6mC9z1Jkc',
+    database: 'sql8684711'
+});
+connection.connect((err) => {
+    if (err) {
+        console.error('Error connecting to database: ' + err.stack);
+        return;
+    }
+    console.log('Connected to database as id ' + connection.threadId);
+});
 
 
 const ejs = require("ejs");
@@ -33,59 +41,111 @@ app.post('/amar', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
+function convertMinutesToHours(minutes) {
+    return Math.floor(minutes / 60); // Divide by 60 to get hours
+}
 
+// Function to fetch remaining minutes after converting to hours
+function fetchRemainingMinutes(minutes) {
+    return minutes % 60; // Modulus operator (%) gives the remainder
+}
+var countOfQueuePeople = 1;
+var totalTimeForNextPerson = 0;
 app.post('/resqme', async (req, res) => {
     // Insert Login Code Here   
-//     const pick =req.body.pick;
-//     const dest =req.body.dest;
+    //     const pick =req.body.pick;
+    //     const dest =req.body.dest;
 
-//     console.log(pick);
-//     console.log(dest);
-    
-// const start = performance.now();
-//     const browser = await puppeteer.launch({
-//         args: [
-//             '--no-sandbox',
-//             '--disable-setuid-sandbox',
-//         ],headless:true,
-//     });;
+    //     console.log(pick);
+    //     console.log(dest);
+
+    // const start = performance.now();
+    //     const browser = await puppeteer.launch({
+    //         args: [
+    //             '--no-sandbox',
+    //             '--disable-setuid-sandbox',
+    //         ],headless:true,
+    //     });;
 
 
 
-//     extractLinksOfZomato = async (url) => {
-//         try {
-//             // Fetching HTML
-         
+    //     extractLinksOfZomato = async (url) => {
+    //         try {
+    //             // Fetching HTML
 
-            
-            
-//             const page = await browser.newPage();
-//             await page.goto(url);
-//             await page.setViewport({
-//                 width: 1920,
-//                 height: 2080
-//             })
-            
-//             await page.waitForSelector('div[class="distanceLine"]');
-//             let element = await page.$('div[class="distanceLine"]');
-//             let element1 = await page.$('div[class="drDurationRoot"]');
-// let value = await page.evaluate(el => el.textContent, element)
-//  value = value + "  " + await page.evaluate(el => el.textContent, element1)
-// console.log(value)
 
-// const end = performance.now() - start;
-//     console.log(`Execution time: ${end}ms`);
-       
-           
-//         } catch (error) {
-//             // res.sendFile(__dirname + '/try.html');
-//             console.log(error);
-//         }
-//     };
-//     z = await extractLinksOfZomato(`https://bing.com/maps/default.aspx?rtp=adr.${pick}~adr.${dest}`);
-//     console.log(z);
-console.log(req.body.seatM);
-res.sendFile(__dirname + '/my-queue.html');
+
+
+    //             const page = await browser.newPage();
+    //             await page.goto(url);
+    //             await page.setViewport({
+    //                 width: 1920,
+    //                 height: 2080
+    //             })
+
+    //             await page.waitForSelector('div[class="distanceLine"]');
+    //             let element = await page.$('div[class="distanceLine"]');
+    //             let element1 = await page.$('div[class="drDurationRoot"]');
+    // let value = await page.evaluate(el => el.textContent, element)
+    //  value = value + "  " + await page.evaluate(el => el.textContent, element1)
+    // console.log(value)
+
+    // const end = performance.now() - start;
+    //     console.log(`Execution time: ${end}ms`);
+
+
+    //         } catch (error) {
+    //             // res.sendFile(__dirname + '/try.html');
+    //             console.log(error);
+    //         }
+    //     };
+    //     z = await extractLinksOfZomato(`https://bing.com/maps/default.aspx?rtp=adr.${pick}~adr.${dest}`);
+    //     console.log(z);
+
+    connection.query('SELECT * FROM customers', (err, results) => {
+        if (err) {
+            console.error('Error fetching data: ' + err.stack);
+            return;
+        }
+
+        countOfQueuePeople = results.length;
+        console.log('Fetched data:');
+        results.forEach((row) => {
+            console.log(row.queue_size);
+            if (row.queue_size > 2 && row.queue_size <= 5) {
+                totalTimeForNextPerson += 30;
+            } else if (row.queue_size > 5 && row.queue_size <= 10) {
+                totalTimeForNextPerson += 45;
+            } else if (row.queue_size > 10) {
+                totalTimeForNextPerson += 60;
+            }
+        });
+
+        // Close the connection
+        console.log(countOfQueuePeople);
+        var hours = convertMinutesToHours(totalTimeForNextPerson)
+        var minutes = fetchRemainingMinutes(totalTimeForNextPerson)
+
+        const final = [];
+        final.push({
+            'queue_position': ++countOfQueuePeople,
+            'total_time_hrs': hours,
+            'total_time_mins': minutes,
+        })
+
+        res.render(__dirname + '/my-queue.ejs', { final: final });
+        connection.end((err) => {
+            if (err) {
+                console.error('Error closing connection: ' + err.stack);
+                return;
+            }
+            console.log('Connection closed.');
+        });
+    });
+
+
+
+
 
 
 });
