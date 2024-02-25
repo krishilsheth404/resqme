@@ -8,10 +8,10 @@ const mysql = require('mysql');
 
 
 const connection = mysql.createConnection({
-    host: 'sql8.freesqldatabase.com',
-    user: 'sql8684711',
-    password: 'V6mC9z1Jkc',
-    database: 'sql8684711'
+    host: 'sql6.freesqldatabase.com',
+    user: 'sql6686697',
+    password: 'ImMYWpxU4v',
+    database: 'sql6686697'
 });
 connection.connect((err) => {
     if (err) {
