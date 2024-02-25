@@ -2,6 +2,7 @@
   "name": "qmemvp",
   "version": "1.0.0",
   "description": "",
+  "main": "main.js",
   "scripts": {
     "test": "",
     "start": "node main.js"
@@ -12,6 +13,10 @@
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krishilsheth404/krishilsheth404.github.io/issues"
+  },
+  "homepage": "https://github.com/krishilsheth404/krishilsheth404.github.io#readme",
   "dependencies": {
     "body-parser": "^1.20.1",
     "domutils": "^2.8.0",
@@ -20,6 +25,7 @@
     "fs": "^0.0.1-security",
     "mysql": "^2.18.1",
     "path": "^0.12.7",
+    "request": "^2.88.2",
     "sql": "^0.78.0"
   }
 }
