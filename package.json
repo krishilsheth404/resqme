@@ -1,19 +1,25 @@
 {
-  "name": "resqme",
+  "name": "qmemvp",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
   "scripts": {
     "test": "",
     "start": "node main.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krishilsheth404/resqme"
+  },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "body-parser": "^1.20.1",
-    "cheerio": "^1.0.0-rc.12",
+    "domutils": "^2.8.0",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
-    "request": "^2.88.2"
+    "fs": "^0.0.1-security",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7",
+    "sql": "^0.78.0"
   }
 }
