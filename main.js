@@ -9,9 +9,9 @@ const mysql = require('mysql');
 
 const connection = mysql.createConnection({
     host: 'sql6.freesqldatabase.com',
-    user: 'sql6686697',
-    password: 'ImMYWpxU4v',
-    database: 'sql6686697'
+    user: 'sql6688320',
+    password: 'r5HHMtWrnR',
+    database: 'sql6688320'
 });
 connection.connect((err) => {
     if (err) {
@@ -40,6 +40,53 @@ app.get('/amar', (req, res) => {
 app.post('/amar', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
+
+app.post('/booking-confirmed', (req, res) => {
+    
+
+   var final={ 
+    customer_name: req.body.name,
+  phone_number: req.body.number,
+  email: req.body.email,
+  queue_size: req.body.queue_size
+};
+
+   
+
+
+  connection.query('INSERT INTO customers SET ?', final, (err, result) => {
+    if (err) {
+      console.error('Error inserting data:', err);
+      return;
+    }
+    console.log('Data inserted successfully');
+  });
+    
+    console.log(final)
+
+    connection.end((err) => {
+        if (err) {
+            console.error('Error closing connection: ' + err.stack);
+            return;
+        }
+        console.log('Connection closed.');
+    });
+
+    res.render(__dirname + '/ticket-confirmed.ejs',{final:final});
+    // res.sendFile(__dirname + '/index.html');
+});
+
+
+app.post('/fillDetails', (req, res) => {
+    
+    var final=[]
+    final.push(req.body.count);
+    final.push(req.body.queuepos);
+    console.log(final)
+    res.render(__dirname + '/user-details.ejs', { final: final });
+    // res.sendFile(__dirname + '/index.html');
+});
+
 
 function convertMinutesToHours(minutes) {
     return Math.floor(minutes / 60); // Divide by 60 to get hours
@@ -102,6 +149,7 @@ app.post('/resqme', async (req, res) => {
     //     z = await extractLinksOfZomato(`https://bing.com/maps/default.aspx?rtp=adr.${pick}~adr.${dest}`);
     //     console.log(z);
 
+    console.log("Seat Count -> "+req.body.seatM);
     connection.query('SELECT * FROM customers', (err, results) => {
         if (err) {
             console.error('Error fetching data: ' + err.stack);
@@ -133,14 +181,11 @@ app.post('/resqme', async (req, res) => {
             'total_time_mins': minutes,
         })
 
+        final.push(req.body.seatM);
+
+        
         res.render(__dirname + '/my-queue.ejs', { final: final });
-        connection.end((err) => {
-            if (err) {
-                console.error('Error closing connection: ' + err.stack);
-                return;
-            }
-            console.log('Connection closed.');
-        });
+       
     });
 
 

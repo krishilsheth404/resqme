@@ -250,7 +250,10 @@
         left: 50%;
         transform: translate(-50%, -50%);
         " id="cTAButtonContainer">
-          <button class="rectangle-parent" style="position: relative;
+        <form action="/fillDetails" method="POST">
+          <input type="text" name="count" id="count" value="<%=final[final.length-1]%>">
+          <input type="text" name="queuepos" id="queuepos" value="<%=final[0].queue_position%>">
+          <button class="rectangle-parent" onclick="this.parent.submit();" style="position: relative; 
           width: 332.5px;
           height: 50px;
           font-family: font;
@@ -260,6 +263,7 @@
           color: white;">
            Next
           </button>
+        </form>
       </div>
     </a>
 
